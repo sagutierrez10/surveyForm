@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    # <h2> You have submitted this form <%= session[:visits]%> times</h2> 
+    <h1>Survey Form </h1>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <label for='name' >Your name:</label><%= session[:name] %>
+        <br><br>
+        <label for="place">Dojo Location:</label><%= session[:location] %>
+        <br><br>
+        <label for="language">Favorite Language:</label><%= session[:language] %>
+        <br><br>
+        <label for='comment'>Comment (optional):</label><%= session[:comment] %>
+        <br>
+        <input type="submit" value="Go Back">
+</body>
+</html>
